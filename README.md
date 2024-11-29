@@ -136,7 +136,3 @@ This command will pull the necessary images and start the services defined in th
 ### Docker Compose File
 
 Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-project/`):
-
----
-
-Dengan instruksi ini, Anda sekarang dapat menjalankan PostgreSQL terlebih dahulu, kemudian membuat database, melanjutkan dengan inisialisasi proyek Python dan migrasi Django, dan akhirnya menjalankan backend serta frontend menggunakan Docker Compose.
