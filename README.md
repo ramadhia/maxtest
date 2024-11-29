@@ -1,7 +1,3 @@
-Berikut adalah instruksi yang diperbarui untuk menjalankan Docker Compose PostgreSQL terlebih dahulu, kemudian melanjutkan dengan pembuatan database, inisialisasi proyek Python, dan migrasi Django.
-
----
-
 # Maxbuzz Project
 
 ## Prerequisites
