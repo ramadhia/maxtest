@@ -133,12 +133,6 @@ This command will pull the necessary images and start the services defined in th
 
 ---
 
-### Example Response
-
-You can download the example response file in this project from `example-response.json`.
-
----
-
 ### Docker Compose File
 
 Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-project/`):
