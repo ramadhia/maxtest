@@ -138,6 +138,10 @@ This command will pull the necessary images and start the services defined in th
 Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-project/`):
 
 ### Error Handling
+- Condition when Products not found
+![image](https://github.com/user-attachments/assets/1d1c7d40-fc9f-43d4-bc05-c5b5c005ed4b)
+- Condition when products are not found, but they are still in the cart page
+![image](https://github.com/user-attachments/assets/408e1719-c85d-4518-9643-7aedca4da208)
 - Condition when getting the 'Out of stock' error before checking out the cart
 ![Screenshot From 2024-11-29 19-48-29](https://github.com/user-attachments/assets/199acc3a-46f6-4397-912c-2a4c7541071d)
 - Condition when getting the 'Out of stock' error after checking out the cart
