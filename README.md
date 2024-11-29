@@ -136,3 +136,10 @@ This command will pull the necessary images and start the services defined in th
 ### Docker Compose File
 
 Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-project/`):
+
+### Error Handling
+- Condition when getting the 'Out of stock' error before checking out the cart
+![Screenshot From 2024-11-29 19-48-29](https://github.com/user-attachments/assets/199acc3a-46f6-4397-912c-2a4c7541071d)
+- Condition when getting the 'Out of stock' error after checking out the cart
+![image](https://github.com/user-attachments/assets/015fcea0-cea9-446e-93a2-fbd9a46995af)
+
