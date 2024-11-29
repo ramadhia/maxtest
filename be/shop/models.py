@@ -12,6 +12,9 @@ class Product(models.Model):
 
 class Order(models.Model):
     id = models.AutoField(primary_key=True)
+    order_key = models.CharField(max_length=255)
+    customer_name = models.CharField(max_length=255)
+    customer_email = models.CharField(max_length=255)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     qty = models.IntegerField()
