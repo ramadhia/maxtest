@@ -1,0 +1,7 @@
+python-dotenv==1.0.1
+loguru==0.6.0
+pydantic==1.10.14
+Django==4.2
+djangorestframework
+psycopg2-binary
+pip==24.3
