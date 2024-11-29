@@ -1,9 +1,10 @@
 import { Product } from "@/types/products";
 import { useMutation, useQuery } from "@tanstack/react-query";
-import {Order} from "@/types/order";
+import { Order } from "@/types/order";
+import { CFG_BACKEND_HOST, CFG_BACKEND_PORT } from "@/lib/config";
 
 const f = async (e: string, init?: RequestInit): Promise<Response> => {
-    const path: string = `http://localhost:8000/${e}`
+    const path: string = `http://${CFG_BACKEND_HOST}:${CFG_BACKEND_PORT}/${e}`
     return await fetch(path, init);
 }
 
