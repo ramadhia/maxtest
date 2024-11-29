@@ -44,8 +44,12 @@ Follow these steps to get the project up and running on your local machine.
 
 #### 2.2 Docker Compose (PostgreSQL)
 
+### Docker Compose File
+
+Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-project/`) before proceeding to the next step.
+
 1. **Start PostgreSQL**:
-   First, start the PostgreSQL service using Docker Compose:
+   First, start the PostgreSQL service using Docker Compose in the root directory (`maxbuzz-project/`):
 
    ```bash
    docker compose -f docker-compose.yaml up db
@@ -100,9 +104,8 @@ python manage.py runserver 0.0.0.0:40001
 Set up the project and run the necessary services using Docker Compose:
 
 #### 3.1 Deploy the Project Using Docker Compose
-
-Now that the database is migrated, you can deploy the project and start all services (Backend Server, PostgreSQL) with the following command:
-
+Now that the database is migrated, you can deploy the project and start all services (Frontend, Backend Server, PostgreSQL) with the following command:
+_Ensure that this step is run in the root directory (`maxbuzz-project/`)._
 ```bash
 docker compose -f docker-compose.yaml up
 ```
@@ -140,17 +143,33 @@ This command will pull the necessary images and start the services defined in th
   - Example endpoint to Fetch Products: `GET - http://localhost:40001/api/products/`
   - Example endpoint to Fetch Orders: `GET - http://localhost:40001/api/orders`
   - Example endpoint to Create Order: `POST - http://localhost:40001/api/orders`
+   ```
+   // example of request
+   {
+       "customer_name": "john doe",
+       "customer_email": "email@email.com",
+       "products": [
+           {
+               "id": 2,
+               "qty": 1,
+               "price": 200,
+               "sub_total": 200
+           },
+           {
+               "id": 4,
+               "qty": 1,
+               "price": 120,
+               "sub_total": 120
+           }
+       ]
+   }
+   ```
 - **Frontend**: Accessible on `http://localhost:40000` or `http://localhost:15000` if run using `npm run dev`
 - **PostgreSQL**: Accessible on `localhost:45432`
   - Username: `root`
   - Password: `password`
 
 ---
-
-### Docker Compose File
-
-Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-project/`):
-
 ### Error Handling
 - Condition when Products not found
 ![image](https://github.com/user-attachments/assets/1d1c7d40-fc9f-43d4-bc05-c5b5c005ed4b)
@@ -173,7 +192,10 @@ Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-pro
 
    
 **Here is the sample of badge seller.**
-   
+
+https://github.com/user-attachments/assets/b12b4ad9-497d-4c30-b92f-36364523d8be
+
+
 2. **For Sellers (Support and Growth):**
    - **Guided Onboarding**: Create a streamlined tutorial for new sellers, including tips on creating high-quality listings.
    - **Promotional Boost**: Allow new sellers limited free access to platform promotions to increase visibility.
