@@ -40,7 +40,7 @@ services:
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
       DB_DATABASE: ${DB_DATABASE}
-      DB_PORT: 45432
+      DB_PORT: ${DB_PORT}
 
   fe-svc:
     container_name: fe-svc

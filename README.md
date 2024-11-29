@@ -23,10 +23,19 @@ Follow these steps to get the project up and running on your local machine.
 #### 2.1 Set up the Django Project
 
 1. **Set up environment variables**:
-   - Rename the `env.example` file to `.env` in the `be` folder.
+   - Rename the `env.example` file to `.env` in the `be` folder, or you can run this command on your machine Linux/MacOS.
+     ```
+      cp .env.example .env
+      ```
    - Configure the database connection string and other necessary variables.
 
-2. **Install dependencies**:
+2. **Set up python virtual env and activate it**
+      ```bash
+      python -m venv .venv
+    
+      source .venv/bin/activate
+      ```
+3. **Install dependencies**:
    Inside the `be` directory, install the required dependencies with pip:
 
    ```bash
@@ -44,6 +53,7 @@ Follow these steps to get the project up and running on your local machine.
 
    This command will only start the **PostgreSQL** container and expose it on port `45432`. Ensure that this step is complete before proceeding to the next step.
 
+
 2. **Check if PostgreSQL is running**:
    You can check if PostgreSQL is running by accessing the following:
 
@@ -51,7 +61,7 @@ Follow these steps to get the project up and running on your local machine.
    psql -h localhost -U root -p 45432
    ```
 
-   If PostgreSQL is running, it will ask for the password (use the one defined in `.env` file or `docker-compose.yaml`).
+   If PostgreSQL is running, it will ask for the password (use the one defined in `.env|env.example` file or `docker-compose.yaml`).
 
 #### 2.3 Create the Database
 
@@ -64,13 +74,16 @@ Follow these steps to get the project up and running on your local machine.
 
 #### 2.4 Initialize the Django Project
 
-1. **Run Django Migrations && Seed the database with initial data**:
+1. **Run Django Migrations & Seed the database with initial data**:
 
    After the database is created, navigate to the `be` directory and run the Django migrations to set up the schema:
 
    ```bash
    python manage.py migrate
    ```
+    _**From this part, the products data will populate 10 sample entries in the database**_
+
+
 
 #### 2.5 Run the Backend API Server
 
@@ -96,6 +109,7 @@ docker compose -f docker-compose.yaml up
 
 This command will pull the necessary images and start the services defined in the `docker-compose.yaml` file, including:
 
+- **Frontend**: Running at port `40000`
 - **Backend API**: Running at port `40001`
 - **PostgreSQL**: Database service running at port `45432`
 
@@ -147,3 +161,20 @@ Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-pro
 - Condition when getting the 'Out of stock' error after checking out the cart
 ![image](https://github.com/user-attachments/assets/015fcea0-cea9-446e-93a2-fbd9a46995af)
 
+---
+## Question 3:
+#### Case Study: Balancing Buyer and Seller Experience
+ Here is my answer. 
+1. **For Buyers (Trust and Quality Assurance):**
+    - **Enhanced Product Verification**: Implement a "Verified Seller" badge for items inspected by the platform  for quality and accuracy.
+    - **Enhanced Seller Trusted**: This badge indicates that the seller is trusted, offering authentic products guaranteed by the platform, and has been verified.
+    - **Standardized Descriptions**: Provide sellers with pre-defined templates and prompts for clear, standardized product descriptions.
+    - **Transparency Features**: Add detailed seller profiles, including badges for achievements (e.g., "New but Verified," "Verified Seller", "Trusted Seller"). For this point, I have implemented for this feature in this project.
+
+   
+**Here is the sample of badge seller.**
+   
+2. **For Sellers (Support and Growth):**
+   - **Guided Onboarding**: Create a streamlined tutorial for new sellers, including tips on creating high-quality listings.
+   - **Promotional Boost**: Allow new sellers limited free access to platform promotions to increase visibility.
+   - **Community Building**: Pair new sellers with experienced sellers for guidance 
