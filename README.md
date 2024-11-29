@@ -1,7 +1,3 @@
-Berikut adalah instruksi yang diperbarui untuk menjalankan Docker Compose PostgreSQL terlebih dahulu, kemudian melanjutkan dengan pembuatan database, inisialisasi proyek Python, dan migrasi Django.
-
----
-
 # Maxbuzz Project
 
 ## Prerequisites
@@ -137,16 +133,6 @@ This command will pull the necessary images and start the services defined in th
 
 ---
 
-### Example Response
-
-You can download the example response file in this project from `example-response.json`.
-
----
-
 ### Docker Compose File
 
 Ensure you have a `docker-compose.yaml` file in the root directory (`maxbuzz-project/`):
-
----
-
-Dengan instruksi ini, Anda sekarang dapat menjalankan PostgreSQL terlebih dahulu, kemudian membuat database, melanjutkan dengan inisialisasi proyek Python dan migrasi Django, dan akhirnya menjalankan backend serta frontend menggunakan Docker Compose.
