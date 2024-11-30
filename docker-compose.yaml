@@ -20,7 +20,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - db:/data/postgresdocke
+      - db:/data/postgres
 
   be-numisroad-svc:
     container_name: be-numisroad-svc
